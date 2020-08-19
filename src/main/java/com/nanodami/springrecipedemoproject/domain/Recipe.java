@@ -1,4 +1,4 @@
-package java.com.nanodami.springrecipedemoproject.domain;
+package com.nanodami.springrecipedemoproject.domain;
 
 public class Recipe {
 
@@ -9,7 +9,7 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
-    private Difficulty difficulty;
+    private java.com.nanodami.springrecipedemoproject.domain.Difficulty difficulty;
 
     private byte[] image;
 

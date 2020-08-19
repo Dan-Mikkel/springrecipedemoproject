@@ -1,4 +1,4 @@
-package java.com.nanodami.springrecipedemoproject.domain;
+package com.nanodami.springrecipedemoproject.domain;
 
 import java.math.BigDecimal;
 
