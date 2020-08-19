@@ -1,14 +1,17 @@
 package com.nanodami.springrecipedemoproject.domain;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Notes {
     private String notes;
 
     //Relationships
-
+    @OneToOne
     private Recipe recipes;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     //Getters and setters
 
@@ -26,5 +29,13 @@ public class Notes {
 
     public void setRecipes(Recipe recipes) {
         this.recipes = recipes;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
