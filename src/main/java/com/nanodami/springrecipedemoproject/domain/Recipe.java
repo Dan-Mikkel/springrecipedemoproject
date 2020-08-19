@@ -9,7 +9,7 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
-    private java.com.nanodami.springrecipedemoproject.domain.Difficulty difficulty;
+    private Difficulty difficulty;
 
     private byte[] image;
 
