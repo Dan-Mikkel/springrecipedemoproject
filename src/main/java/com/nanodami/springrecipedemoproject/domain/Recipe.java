@@ -1,6 +1,9 @@
 package com.nanodami.springrecipedemoproject.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Recipe {
@@ -15,7 +18,12 @@ public class Recipe {
     private Difficulty difficulty;
 
     private byte[] image;
+
+    //Relationships
+    @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
+    @Id
+    private Long id;
 
     // Getters and setters
 
@@ -97,5 +105,13 @@ public class Recipe {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
