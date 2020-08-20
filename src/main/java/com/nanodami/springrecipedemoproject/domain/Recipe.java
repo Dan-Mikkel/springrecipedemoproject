@@ -14,6 +14,7 @@ public class Recipe {
     private String directions;
     private Difficulty difficulty;
 
+    @Lob
     private byte[] image;
 
     //Relationships
