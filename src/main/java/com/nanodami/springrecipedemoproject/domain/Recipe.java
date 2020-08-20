@@ -1,6 +1,7 @@
 package com.nanodami.springrecipedemoproject.domain;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Recipe {
@@ -20,6 +21,10 @@ public class Recipe {
     //Relationships
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    private Set<Ingredient> ingredients;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
