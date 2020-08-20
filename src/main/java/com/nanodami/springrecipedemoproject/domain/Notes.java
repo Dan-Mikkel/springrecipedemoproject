@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class Notes {
+    @Lob
     private String notes;
 
     //Relationships
